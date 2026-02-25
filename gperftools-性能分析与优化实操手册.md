@@ -226,6 +226,7 @@ find /usr -name "libtcmalloc.so*" 2>/dev/null
 ```
 
 *确保输出包含了库文件的实际路径，这在后续无侵入式挂载时需要用到。*
+
 2. **检查 addr2line 工具**：
 ```bash
 which addr2line
@@ -233,6 +234,7 @@ which addr2line
 ```
 
 *`pprof` 严重依赖此工具将十六进制内存地址翻译为 C++ 源码的具体行号。如果缺失，需安装 `binutils`。*
+
 3. **检查 pprof 版本**：
 执行 `pprof -version`，确保它不再是 Perl 脚本版本。
 
